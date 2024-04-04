@@ -1,0 +1,378 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --primary-color: #08266a;
+  --secodary-color: #96cdf6;
+  --dark-color: #000511;
+  --black: #191817;
+  --black25: #cfdbf8fb;
+  --black10: #f8f8f8;
+
+  --H1: 7.419rem;
+  --H2: clamp(2.624rem, 3.4783vw + 0.3043rem, 5.247rem);
+  --H3: clamp(2.856rem, 3.4783vw + 0.3043rem, 3.711rem);
+  --H4: 2.624rem;
+  --H5: clamp(1.313rem, 3.4783vw + 0.3043rem, 1.856rem);
+  --H6: clamp(0.9rem, 3.4783vw + 0.3043rem, 1.313rem);
+}
+
+.passion-commitment {
+  padding: 0 96px;
+  background-color: #08266a;
+}
+
+.pass-commit,
+.choosing-us {
+  max-width: 1440px;
+  padding: 96px 0;
+  margin: 0 auto;
+}
+
+.pass-commit h1 {
+  font-size: var(--H3);
+  font-family: Poppins, Arial;
+  color: var(--black10);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.pass-commit p {
+  font-family: Poppins, Arial;
+  color: var(--black25);
+  text-align: center;
+}
+
+.choose {
+  padding: 0 96px;
+}
+
+.choosing-us .choose-title {
+  font-size: var(--H3);
+  font-family: Poppins, Arial;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.why-choose-us-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 32px;
+  gap: 32px 16px;
+  place-items: center;
+  align-items: start;
+}
+
+.choosing-us-title {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+}
+
+.choosing-us-title img {
+  height: 48px;
+}
+
+.choosing-us-title h1 {
+  font-family: Poppins, Arial;
+  font-size: var(--H5);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.why-choose-us {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  width: 100%;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  font-family: Poppins, Arial;
+}
+
+.services {
+  background-color: var(--primary-color);
+  width: 100%;
+  display: flex;
+}
+
+.cover-background {
+  width: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.cover-background .cover {
+  position: absolute;
+  backdrop-filter: blur(6px);
+  height: 100%;
+  width: 100%;
+  background-color: hsla(223, 75%, 54%, 0.35);
+}
+
+.cover-background img {
+  width: 100%;
+  display: flex;
+}
+
+.services-contents {
+  width: 50%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+.services-wrapper {
+  padding: 0 96px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 96px;
+}
+
+.services-wrapper h1 {
+  font-family: Poppins, Arial;
+  font-size: var(--H5);
+  color: var(--black10);
+}
+
+.services-wrapper p {
+  font-family: Poppins, Arial;
+  font-size: var(--H6);
+  color: var(--black25);
+}
+
+.title {
+  font-family: Poppins, Arial;
+  font-size: var(--H2);
+  color: var(--black10);
+  padding: 96px;
+}
+
+.price-list {
+  background-color: var(--secodary-color);
+}
+
+.prices {
+  text-align: center;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 32px;
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+.prices-cont {
+  background-color: var(--black10);
+  max-width: 600px;
+  display: flex;
+  padding: 16px 32px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.prices-cont  {
+  font-family: Poppins, Arial;
+  font-size: var(--H6);
+}
+
+.price-list-title {
+  text-align: center;
+  font-family: Poppins, Arial;
+  font-size: var(--H3);
+  color: var(--primary-color);
+  margin-bottom: 96px;
+}
+
+.price-list-container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 96px 0;
+}
+
+.price-list-image-grid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px 16px;
+  padding: 0 96px;
+}
+
+.price-list-image {
+  background-color: var(--primary-color);
+  aspect-ratio: 1/1;
+  max-width: 250px;
+  max-height: 250px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 25%);
+}
+
+.price-list-image img {
+  max-width: 200px;
+  max-height: 200px;
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+}
+
+.promo-container {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 96px;
+}
+
+.promo-wrapper {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.promo-wrapper p {
+  font-family: Poppins, Arial;
+  font-size: 16px;
+  color: var(--black);
+}
+
+.promo-title {
+  font-family: Poppins, Arial;
+  font-size: var(--H5);
+  color: var(--primary-color);
+}
+
+.bags {
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.bags img {
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .passion-commitment {
+    padding: 0 64px;
+  }
+
+  .pass-commit,
+  .choosing-us {
+    padding: 96px 0;
+  }
+
+  .choose {
+    padding: 0 64px;
+  }
+
+  .services-wrapper {
+    padding: 0 64px;
+    padding-bottom: 64px;
+  }
+  .title {
+    padding: 64px;
+  }
+
+  .price-list-container {
+    padding: 64px 0;
+  }
+
+  .price-list-image-grid {
+    padding: 0 64px;
+  }
+
+  .price-list-title {
+    margin-bottom: 64px;
+  }
+
+  .promo-container {
+    padding: 64px;
+  }
+}
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 800px) {
+  .header {
+    padding-top: 68px;
+    height: 780px;
+  }
+
+  .services-wrapper p {
+    font-family: Poppins, Arial;
+    font-size: 1rem;
+    color: var(--black25);
+  }
+
+  .cover-background {
+    display: none;
+  }
+
+  .services-contents {
+    width: 100%;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .price-list-image-grid {
+    padding: 0 32px;
+  }
+
+  .promo-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .passion-commitment {
+    padding: 0 32px;
+  }
+
+  .pass-commit,
+  .choosing-us {
+    padding: 64px 0;
+  }
+
+  .choose {
+    padding: 0 32px;
+  }
+
+  .services-wrapper {
+    padding: 0 32px;
+    padding-bottom: 64px;
+  }
+  .title {
+    padding: 64px 32px;
+  }
+
+  .promo-container {
+    padding: 32px;
+  }
+}

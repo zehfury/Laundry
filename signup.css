@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --primary-color: #08266a;
+  --secodary-color: #96cdf6;
+  --dark-color: #000511;
+  --black: #191817;
+  --black25: #cfdbf8fb;
+  --black10: #f8f8f8;
+
+  --H1: 7.419rem;
+  --H2: clamp(2.624rem, 3.4783vw + 0.3043rem, 5.247rem);
+  --H3: clamp(1.856rem, 3.4783vw + 0.3043rem, 3.711rem);
+  --H4: 2.624rem;
+  --H5: clamp(1.313rem, 3.4783vw + 0.3043rem, 1.856rem);
+  --H6: clamp(0.9rem, 3.4783vw + 0.3043rem, 1.313rem);
+}
+
+
+.signup-form-container {
+  display: flex;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 25%);
+}
+
+.form {
+  max-width: 700px;
+  width: 100%;
+  padding: 32px 96px;
+  background: var(--black10);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 32px;
+  justify-content: center;
+}
+
+.signup-section {
+  height: 100%;
+  padding: 128px 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secodary-color);
+}
+
+.form-img img { 
+  max-width: 500px;
+  width: 100%;
+  padding: 16px;
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  margin-top: 16px;
+}
+
+.form-group:nth-child(1) {
+  margin-top: 0;
+}
+
+.form-group i,
+.form-group p {
+  position: absolute;
+  color: var(--primary-color);
+  top: 18px;
+  left: 12px;
+  font-weight: 700;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-inputs input[type="text"],
+.form-inputs input[type="password"] {
+  border: none;
+  padding: 14px 0 14px 36px;
+  border-bottom: solid 2px var(--black);
+  background-color: transparent;
+  outline: none;
+  font-size: 18px;
+  font-family: Average Sans, Arial;
+  width: 100%;
+}
+
+.close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  color: var(--primary-color);
+}
+
+.cta {
+  font-family: Average Sans, Arial;
+}
+
+.sign-up-qoute h2 {
+  font-family: Poppins, Arial;
+  font-size: var(--H5);
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+.sign-up-qoute p {
+  font-family: Average Sans, Arial;
+}
+
+.fullname {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.fullname .firstname {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  margin-top: 16px
+}
+
+.fullname .lastname {
+  flex: 1;
+  width: 100%;
+} 
+
+.delivery-add {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding-top: 16px;
+}
+
+.delivery-add label {
+  font-family: Merienda, Arial;
+  font-weight: 600;
+  padding: 0 16px 8px;
+  color: var(--dark-color);
+}
+
+.delivery-add textarea {
+  outline: none;
+  border: solid 2px var(--primary-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 25%);
+  padding: 8px 16px;
+  resize: none;
+  font-family: Average San, Arial;
+  background-color: var(--black10);
+  font-size: 16px;
+}
+
+.delivery-add textarea:focus {
+  font-family: Average San, Arial;
+}
+
+input[type="submit"] {
+  font-family: Average Sans, Arial;
+  border: none;
+  max-width: 350px;
+  margin: 0 auto;
+  width: 100%;
+  cursor: pointer;
+  padding: 14px 0;
+  background-color: var(--primary-color);
+  color: var(--black10);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 25%);
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--secodary-color);
+}
+
+.error-messages {
+  position: relative;
+  display: flex;
+  padding: 2px 0;
+  align-items: center;
+}
+
+.error-messages span{
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: red;
+  font-family: Average Sans, Arial;
+}
+
+@media (max-width: 1024px) {
+  .form {
+    padding: 32px 96px;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 800px) {
+  .signup-form-container {
+    flex-direction: column;
+  }
+
+  .form {
+    padding: 32px 64px;
+    gap: 32px;
+  }
+
+  .form-img img {
+    max-width: 96px;
+    width: 100%;
+  }
+  
+  .fullname {
+    display: flex;
+    flex-direction: column;
+  }
+  .lastname {
+    margin-top: 0;
+  }
+  
+}
+
+
+@media (max-width: 768px) {
+
+  .signup-form-container {
+    padding: 0 32px;
+  }
+
+  .form {
+    padding: 32px 32px;
+    gap: 32px;
+  }
+
+  .form-img {
+    padding: 8px;
+  }
+
+  .form-img img {
+    max-width: 164px;
+    width: 100%;
+    padding: 0;
+  }
+}

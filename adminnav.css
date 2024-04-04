@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --primary-color: #08266a;
+  --secodary-color: #96cdf6;
+  --dark-color: #000511;
+  --black: #191817;
+  --black25: #cfdbf8fb;
+  --black10: #f8f8f8;
+
+  --H1: 7.419rem;
+  --H2: clamp(2.624rem, 3.4783vw + 0.3043rem, 5.247rem);
+  --H3: clamp(2.856rem, 3.4783vw + 0.3043rem, 3.711rem);
+  --H4: 2.624rem;
+  --H5: clamp(1.313rem, 3.4783vw + 0.3043rem, 1.856rem);
+  --H6: clamp(0.9rem, 3.4783vw + 0.3043rem, 1.313rem);
+}
+.navbar-header {
+  margin-top: 32px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  background-color: var(--black10);
+  box-shadow: 0 2px 8px rgba(240, 236, 220, 25%);
+  -webkit-box-shadow: 0 2px 8px rgba(240, 236, 220, 25%);
+  -moz-box-shadow: 0 2px 8px rgba(240, 236, 220, 25%);
+}
+
+.navbar-header img {
+  height: 48px;
+}
+
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background: var(--black10);
+  z-index: 99;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 10%);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 32px;
+  height: 100%;
+}
+
+.user-welcome h1 {
+  font-family: Merienda, Arial;
+  font-size: var(--H5);
+  font-weight: 800;
+  color: var(--primary-color);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 25%);
+}
+
+.user-welcome h1 span {
+  font-weight: 400;
+  font-family: Poppins, Arial;
+}
+
+.user-welcome p {
+  font-family: Poppins, Arial;
+  border-radius: 2px;
+}
+
+.navbar-nav {
+  margin-top: 32px;
+  font-family: Poppins, Arial;
+}
+
+.nav-label {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--black75);
+  padding: 8px 8px 0 16px;
+}
+
+.fa-solid {
+  padding: 0 8px 0 0;
+}
+
+.line {
+  height: 2px;
+  background-color: var(--primary-color);
+  width: 100%;
+  border-radius: 100vmax;
+  margin: 0 0 16px 0;
+}
+
+.log-container,
+.home-container {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.log-container {
+  margin-top: 32px;
+}
+
+.log-container li {
+  margin: 0 16px;
+  padding: 8px 16px;
+  border-radius: 3px;
+}
+
+.log-container li:hover {
+  background-color: var(--black75);
+}
+
+.log-container li a {
+  color: var(--black75);
+}
+
+.dashboard {
+  background-color: var(--black10);
+  padding: 8px 16px;
+  border-radius: 3px;
+  margin: 0 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(240, 236, 220, 25%);
+  -webkit-box-shadow: 0 2px 8px rgba(240, 236, 220, 25%);
+  -moz-box-shadow: 0 2px 8px rgba(240, 236, 220, 25%);
+}
+
+.dashboard a {
+  color: var(--dark-color);
+}
+
+.collapse {
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.collapse li {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.collapse li a {
+  font-weight: 300;
+}
+
+.collapse li a:hover {
+  color: var(--primary-color);
+}
+
+.categories:hover .collapse,
+.menu:hover .collapse {
+  height: 100%;
+  opacity: 1;
+}
+
+.profile-container {
+  background: var(--black10);
+  position: absolute;
+  bottom: 48px;
+  border-radius: 24px;
+  aspect-ratio: 1/1;
+  left: 48px;
+  right: 48px;
+  box-shadow: 0 2px 8px rgba(240, 236, 220, 25%);
+  -webkit-box-shadow: 0 2px 8px rgba(240, 236, 220, 25%);
+  -moz-box-shadow: 0 2px 8px rgba(240, 236, 220, 25%);
+}
+
+.profile-wrapper {
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  flex-direction: column;
+}
+
+.profile-pic {
+  overflow: hidden;
+  width: 48px;
+  height: 48px;
+  border-radius: 100vmax;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 25%);
+}
+
+.profile-pic img {
+  width: 100%;
+}
+
+.profile-name {
+  display: flex;
+  padding: 8px 0;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.profile-name p {
+  font-family: Average Sans, Arial;
+}
+
+.admin-logout a {
+  font-family: Average Sans, Arial;
+  color: var(--dark-color);
+  font-size: var(--H6);
+}

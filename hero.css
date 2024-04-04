@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --primary-color: #08266a;
+  --secodary-color: #3c1f00;
+  --dark-color: #000511;
+  --black: #191817;
+  --black25: #cfdbf8fb;
+  --black10: #f8f8f8;
+
+  --H1: 7.419rem;
+  --H2: clamp(2.624rem, 3.4783vw + 0.3043rem, 5.247rem);
+  --H3: clamp(1.856rem, 3.4783vw + 0.3043rem, 3.711rem);
+  --H4: 2.624rem;
+  --H5: clamp(1.313rem, 3.4783vw + 0.3043rem, 1.856rem);
+  --H6: clamp(0.9rem, 3.4783vw + 0.3043rem, 1.313rem);
+}
+
+.header {
+  padding-top: 192px;
+  position: relative;
+  height: 900px;
+}
+
+.hero-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: calc(900px - 193px);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 99;
+  gap: 32px;
+  padding: 0 64px;
+}
+
+.hero-content h1 {
+  font-family: Poppins, Arial;
+  font-size: var(--H3);
+  color: var(--black10);
+  text-align: center;
+}
+
+.hero-content p {
+  font-family: Poppins, Arial;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  color: var(--black10);
+  font-size: var(--H6);
+  font-weight: 300;
+}
+
+.hero-content button {
+  font-family: Poppins, Arial;
+  background-color: var(--primary-color);
+  color: var(--black10);
+  border: none;
+  padding: 16px 64px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 00, 25%);
+}
+
+.hero-background-container {
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+.hero-background-container .cover {
+  position: absolute;
+  backdrop-filter: blur(6px);
+  height: 100%;
+  width: 100%;
+  background-color: hsla(223, 75%, 54%, 0.35);
+}
+
+.hero-background-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: -1;
+}
+
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding-top: 84px;
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    padding-top: 68px;
+    height: 780px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .hero-content {
+    padding: 0 32px;
+  }
+}

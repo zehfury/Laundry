@@ -1,0 +1,572 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: poppins, Arial;
+}
+
+:root {
+  --primary-color: #08266a;
+  --secodary-color: #3c1f00;
+  --dark-color: #000511;
+  --black: #191817;
+  --black25: #c7c8c9;
+  --black10: #f8f8f8;
+
+  --H1: 7.419rem;
+  --H2: clamp(2.624rem, 3.4783vw + 0.3043rem, 5.247rem);
+  --H3: clamp(1.856rem, 3.4783vw + 0.3043rem, 3.711rem);
+  --H4: 2.624rem;
+  --H5: 1.856rem;
+  --H6: 1.313rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-section {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  z-index: 99;
+  transition: padding 0.2s ease;
+}
+
+.line {
+  background-color: var(--dark-color);
+  width: 5px;
+  height: 32px;
+  transition: width 0.2s ease-in-out;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  padding: 16px 96px;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+.top-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 96px;
+  justify-content: space-between;
+}
+
+.app-logo img {
+  height: 64px;
+}
+
+.contacts-container,
+.top-header-container,
+.insta a {
+  display: flex;
+  max-width: 200px;
+  width: 100%;
+  align-items: center;
+  gap: 8px;
+}
+
+.insta img {
+  height: 20px;
+}
+
+.nav-btns {
+  display: flex;
+}
+
+header.sticky .top-header {
+  display: none;
+}
+
+header.sticky .logo-light {
+  height: 64px;
+}
+
+.navbar-brand-light {
+  display: none;
+}
+
+header.sticky .navbar-brand {
+  display: none;
+}
+
+header.sticky .navbar-brand-light {
+  display: block;
+}
+
+header.sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: var(--black10);
+  transition: all 0.3s ease-in;
+  animation: fade-down 0.2s ease-in;
+  padding: 8px 0;
+}
+
+@keyframes fade-down {
+  from {
+    top: -96px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+header.sticky .navbar {
+  padding: 0 96px;
+  background-color: var(--black10);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+header.sticky .hide {
+  display: block;
+}
+
+.nav-btns-hide,
+header.sticky .nav-btns {
+  display: none;
+}
+
+header.sticky .nav-btns-hide {
+  display: flex;
+}
+
+.nav-links ul li {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.nav-links ul li a {
+  font-family: Poppins, Arial;
+  color: var(--black10);
+}
+
+header.sticky .nav-links ul li a {
+  color: var(--primary-color);
+  font-family: Poppins, Arial;
+}
+
+header.sticky .nav-links ul .register-btn a {
+  color: var(--black10);
+}
+
+.ham-nav {
+  display: none;
+  cursor: pointer;
+}
+
+.ham-nav i {
+  font-size: 24px;
+  color: var(--black10);
+}
+
+header.sticky .ham-nav i {
+  color: var(--primary-color);
+}
+
+header.sticky .register-btn,
+header.sticky .logout-btn {
+  max-width: 200px;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 16px 48px;
+  background-color: var(--primary-color);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+header.sticky .book-laundry-btn a {
+  color: var(--black10);
+}
+
+header.sticky a.nav-link.active {
+  color: var(--black10);
+}
+
+header.sticky .login-btn,
+header.sticky .book-laundry-btn {
+  border: 2px solid var(--primary-color);
+}
+
+header.sticky a.nav-link.login {
+  color: var(--primary-color);
+}
+
+.ham-nav .fa-bars {
+  z-index: 1;
+}
+
+.ham-nav .fa-xmark {
+  display: none;
+}
+
+body.menu-open {
+  overflow: hidden;
+  position: relative;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.register-btn {
+  max-width: 150px;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 16px 48px;
+  background-color: var(--black10);
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+}
+
+.logout-btn {
+  text-transform: uppercase;
+  padding: 16px 48px;
+  background-color: var(--black10);
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+}
+
+.login-btn {
+  max-width: 150px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 16px 48px;
+  border: 2px solid var(--black10);
+  margin-right: 16px;
+}
+
+.book-laundry-btn {
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-right: 16px;
+  padding: 16px 48px;
+  border: solid 2px var(--black10);
+}
+
+.book-laundry-btn a {
+  font-family: Poppins, Arial;
+  color: var(--black10);
+}
+
+a.nav-link.active {
+  color: var(--dark-color);
+  font-family: Poppins, Arial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.nav-link.login,
+a.nav-link.book {
+  color: var(--black10);
+  font-family: Poppins, Arial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-cart-shopping {
+  font-size: 24px;
+}
+
+@media (max-width: 1024px) {
+  .nav-links {}
+
+  header.sticky {
+    padding: 8px 0;
+  }
+
+  header.menu-open {}
+
+  header.sticky.menu-open {}
+
+  .navbar {
+    padding: 16px 64px;
+  }
+
+  header.sticky .navbar {
+    padding: 0 64px;
+  }
+
+  .nav-links ul {
+    gap: 16px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .top-header {
+    padding: 16px 64px;
+  }
+
+  header.sticky .register-btn {
+    height: 48px;
+    padding: 0 32px;
+  }
+
+  header.sticky .login-btn {
+    height: 48px;
+    padding: 0 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .top-header {
+    display: none;
+  }
+
+  .ham-nav-sep {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 64px;
+  }
+
+  header.sticky .ham-nav-sep {
+    padding: 0px;
+  }
+
+  .ham-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .ham-nav.open .fa-bars {
+    display: none;
+  }
+
+  .ham-nav.open .fa-xmark {
+    display: flex;
+    font-size: 28px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ham-nav .fa-cart-shopping {
+    font-size: 21px;
+    margin-right: 16px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-logo {
+    display: block;
+  }
+
+  header.menu-open {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+
+  header.sticky .hide {
+    display: block;
+  }
+
+  .nav-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .nav-links.open {
+    display: flex;
+    top: 0;
+    position: fixed;
+    background-color: var(--black10);
+    top: 84px;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 128px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in;
+    animation: fade-right 0.2s ease-in;
+  }
+
+  @keyframes fade-right {
+    from {
+      left: -100%;
+    }
+
+    to {
+      left: 0;
+    }
+  }
+
+  .navbar {
+    padding: 8px 0;
+  }
+
+  header .logo {
+    height: 64px;
+  }
+
+  .nav-links.open ul {
+    flex-direction: column;
+    height: 100%;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links.open ul li a {
+    color: var(--primary-color);
+    font-size: var(--H6);
+  }
+
+  .nav-links.open ul li.register-btn a {
+    color: var(--black10);
+  }
+
+  .register-btn,
+  .logout-btn,
+  .header.sticky .logout-btn {
+    padding: 20px 56px;
+    max-width: 100%;
+    background-color: var(--primary-color);
+  }
+
+  .logout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header.sticky .nav-btns {
+    display: flex;
+  }
+
+  header.sticky .nav-btns-hide {
+    display: none;
+  }
+
+  .register-btn a.nav-link.active,
+  .logout-btn a.nav-link.active {
+    color: var(--black10);
+  }
+
+  .nav-btns-hide {
+    display: none;
+  }
+
+  .nav-links.open .hide {
+    display: none;
+  }
+
+  .login-btn,
+  .book-laundry-btn,
+  header.sticky .book-laundry-btn {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 16px 48px;
+    border: 2px solid var(--primary-color);
+    margin-right: 0px;
+  }
+
+  .login-btn a.nav-link.login,
+  .book-laundry-btn a,
+  header.sticky .book-laundry-btn a {
+    color: var(--primary-color);
+  }
+}
+
+@media (max-width: 786px) {
+  .mobile-logo img {
+    height: 48px;
+  }
+
+  .nav-links.open {
+    top: 68px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ham-nav-sep {
+    padding: 0 32px;
+  }
+
+  .nav-links.open {
+    top: 68px;
+  }
+
+  header.sticky .navbar {
+    padding: 0 32px;
+  }
+
+  .navbar {
+    padding: 8px 0;
+  }
+
+  .nav-links.open .line {
+    background-color: var(--primary-color);
+  }
+
+  .line {
+    max-width: 350px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin: 16px 32px;
+  }
+}
